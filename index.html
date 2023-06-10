@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Housing Layout</title>
+    <style>
+      /* Basic styling to the layout */
+      .grid {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      }
+
+      .plot {
+        border: 1px solid #ccc;
+        height: 80px;
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .house {
+        background-color: #6c757d;
+        color: #fff;
+      }
+
+      .restaurant {
+        background-color: #dc3545;
+        color: #fff;
+      }
+
+      .gym {
+        background-color: #ffc107;
+        color: #000;
+      }
+
+      .hospital {
+        background-color: #0dcaf0;
+        color: #000;
+      }
+      .airport {
+        background-color: #1cd23d;
+        color: #000;
+      }
+
+      .mall {
+        background-color: #dd652d;
+        color: #000;
+      }
+
+      .rail {
+        background-color: #d950de;
+        color: #000;
+      }
+
+      .best-house {
+        background-color: rgb(
+          18,
+          3,
+          64
+        ); /* Change the color of the best house */
+      }
+
+      #recommend-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      #recommend-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <h1>House Recommendation Model</h1>
+    <label for="rows">Number of Rows:</label>
+    <input type="number" id="rows" min="1" value="5" />
+    <label for="columns">Number of Columns:</label>
+    <input type="number" id="columns" min="1" value="5" />
+    <button onclick="createHousingLayout()">Create Layout</button>
+    <div class="grid" id="housing-layout"></div>
+    <button id="recommend-button" onclick="recommendHouse()">Recommend</button>
+  </body>
+</html>

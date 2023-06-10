@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 5px;
+}
+
+.plot {
+    border: 1px solid #ccc;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.house {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.restaurant {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.gym {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.hospital {
+    background-color: #0dcaf0;
+    color: #000;
+}
